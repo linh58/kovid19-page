@@ -1,0 +1,465 @@
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header__navbar-item {
+        display: block;
+    }
+
+    .header__navbar-btn {
+        position: absolute;
+        left: 70px;
+    }
+
+    .navbar-on-mobile {
+        position: fixed;
+        display: unset;
+        top: 0;
+        left: -50px;
+        padding-top: 10px;
+        width: 320px;
+        max-width: 100%;
+        overflow: auto;
+        background-color: var(--white-color);
+        box-shadow: 0px 5px 40px 0px rgb(80 101 142 / 8%);
+        height: 100%;
+        opacity: 0; 
+        transform: translateX(-100%); 
+        transition: transform linear 0.4s, opacity linear 0.4s; 
+    }
+
+    .show-navbar-on-mobile {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .button-on-mobile {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .close-btn-mobile {
+        position: absolute;
+        cursor: pointer;
+        color: #DAE1F0;
+        z-index: 99;
+        font-size: 3.4rem;
+        transition: 0.4s;
+        top: -10px; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .show-close-btn {
+        display: block;
+    }
+
+    .header__overlay {
+        position: fixed;
+        top: 5px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(27,71,161,0.8);
+        transition: 0.5s;
+        display: none;
+    }
+
+    .show-overlay {
+        display: block;
+    }
+
+    .header__subnav-list {
+        display: none !important;
+    }
+
+    .header {
+        padding: 30px 0;
+    }
+
+    .header.sticky {
+        padding: 15px 0;
+    }
+
+    .header__navbar-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header-wrap {
+        justify-content: space-between;
+    }
+
+    .banner__header {
+        flex-direction: column-reverse;
+    }
+
+    .recommend__section-active::after {
+        display: none;
+    }
+    
+    .recommend__section-middle {
+        order: 1;
+    }
+
+    .recommend__section-left {
+        order: 2;
+    }
+
+    .recommend__section-right {
+        order: 3;
+    }
+}
+
+/* Tablet pro */
+@media (min-width: 992px) and (max-width: 1250px) {
+    .header__navbar-item {
+        padding: 0 10px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .tablet-padding {
+        padding: 90px 0;
+    }
+    
+    .banner__header-img {
+        padding: 0 100px;
+    }
+
+    .spread__section-card-item,
+    .symptoms__section-card-item {
+        margin: 15px 0;
+    }
+
+    .symptoms__section-btn {
+        margin-top: 15px;
+    }
+
+    .symptoms__section-suggest  {
+        margin-bottom: 15px;
+    }
+
+    .symptoms__section-note {
+        margin-top: 70px;
+    }
+
+    .advice__section-card-item {
+        padding: 22px 0;
+    }
+
+    .advice__section-question {
+        padding-top: 40px;
+    }
+
+    .protect__section-img {
+        padding: 15px 100px 0 100px;
+    }
+
+    .treatment__section-introduce {
+        padding-top: 0;
+    }
+    
+    .recommend__section-middle-img {
+        padding: 0 100px;
+    }
+
+    .accordion,
+    .about__section-card,
+    .update__section-card-item {
+        margin-top: 30px;
+    }
+
+    .footer__top-from {
+        margin-bottom: 30px;
+    }
+
+    .spread__section-card-item,
+    .symptoms__section-card-item {
+        margin-left: 25%;
+    }
+
+    .banner__header-corona {
+        font-size: 7.2rem;
+    }
+
+    .banner__header-sub {
+        font-size: 2.2rem;
+        line-height: 50px
+    }
+
+    .banner__header-sup {
+        font-size: 4rem;
+        line-height: 18px;
+    }
+
+    .symptoms__section-card-item {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .symptoms__section-heading {
+        padding-bottom: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    /* General class */
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .mobile-subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+
+    .mobile-title {
+        font-size: 3.6rem;
+    }
+
+    .mobile-btn {
+        font-size: 1.3rem;
+    }
+
+    .m-gutters {
+        padding: 50px 15px;
+    }
+
+    .mobile-gutters {
+        padding: 15px;
+    }
+
+    .mobile-gutters-width {
+        padding: 0 15px;
+    }
+
+    .mobile-gutters-height {
+        padding: 15px 0;
+    }
+
+    /* Special class */
+    .banner__header-heading {
+        margin-bottom: 16px;
+    }
+
+    .banner__header-corona {
+        font-size: 5.6rem;
+    }
+
+    .banner__header-people,
+    .step__section-image-wrap,
+    .treatment__section-introduce,
+    .banner__header-img,
+    .symptoms__section-card {
+        padding: 0;
+    }
+
+    .banner__header-sup {
+        font-size: 3rem;
+        line-height: 0;
+    }
+
+    .banner__header-sub {
+        font-size: 1.6rem;
+        line-height: 54px;
+    }
+
+    .close-btn-mobile {
+        left: -8px;
+    }
+
+    .banner__header-btn {
+        padding: 10px;
+    }
+
+    .about__section-card {
+        margin: 15px 0;
+    }
+    
+    .about__section-title {
+        margin: 4px 0 8px 0;
+        padding-right: 50px;
+    }
+
+    .about__section-lead {
+        font-size: 1.8rem;
+    }
+
+    .about__section-lead {
+        padding-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .about__section-detail,
+    .banner__header-desc {
+        margin-bottom: 12px;
+    }
+    
+    .mobile-margin-15 {
+        margin: 15px 0;
+    }
+
+    .spread__section-heading,
+    .update__section-heading {
+        padding-bottom: 25px;
+    }
+
+    .spread__section-btn,
+    .advice__section-question {
+        padding-top: 30px;
+    }
+
+    .symptoms__section-heading,
+    .ask__section-heading {
+        padding-bottom: 40px;
+    }
+
+    .symptoms__section-card-img {
+        width: 60px;
+        top: -36px;
+    }
+
+    .symptoms__section-card-item {
+        margin: 30px 0;
+    }
+
+    .symptoms__section-warning {
+        font-size: 2.8rem;
+    }
+
+    .advice__section-btn,
+    .advice__section-trans-btn {
+        padding: 8px;
+    }
+
+    .protect__section-title {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+    }
+
+    .step__section-title {
+        font-size: 2.4rem;
+    }
+
+    .protect__section-wrap {
+        padding: 20px 24px 24px;
+    }
+
+    .step__section-heading {
+        padding-bottom: 30px;
+    }
+
+    .step__section-img {
+        width: 100px;
+    }
+
+    .recommend__section-heading {
+        padding-bottom: 40px;
+    }
+
+    .recommend__section-active-img {
+        width: 82px;
+    }
+
+    .recommend__section-active {
+        flex-direction: column-reverse;
+    }
+
+    .recommend__section-active-title {
+        font-size: 1.3rem;
+    }
+
+    .recommend__section-active-title {
+        padding-top: 12px;
+    }
+
+    .active-box {
+        top: 12px;
+    }
+
+    .should-do {
+        left: 57%;
+    }
+
+    .ask__section-title,
+    .symptoms__section-note {
+        margin: 0;
+    }
+
+    .ask__section-list {
+        padding-bottom: 15px;
+    }
+
+    .accordion {
+        padding-top: 15px;
+    }
+
+    .update__section-card-image {
+        padding: 20px 20px 0
+    }
+
+    .update__section-card-content {
+        padding: 24px 20px;
+    }
+
+    .footer {
+        padding: 40px 15px;
+    }
+
+    .footer__top {
+        padding-bottom: 0;
+    }
+
+    .footer__top-from {
+        margin-bottom: 20px;
+    }
+
+    .footer__top-menu-wrap {
+        margin: 20px 0;
+    }
+
+    .footer__copyright {
+        display: unset;
+    }
+
+    .footer__bottom {
+        padding-top: 16px;
+    }
+
+    .footer__copyright-madeby {
+        margin-bottom: 10px;
+    }
+
+    .footer__copyright-text {
+        line-height: 20px;
+    }
+
+    .banner__header-btn-text {
+        padding: 5px;
+    }
+
+    .advice__section-title,
+    .step__section-title {
+        margin-left: 25%;
+    }
+
+    .spread__section-title {
+        margin-left: 16.66667%;
+    }
+
+    .about__section-card-block {
+        padding: 0 5px;
+    }
+
+    .ask__section-item span,
+    .accordion-text {
+        padding-right: 30px;
+    }
+}
