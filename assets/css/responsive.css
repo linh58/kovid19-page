@@ -116,9 +116,13 @@
 }
 
 /* Tablet pro */
-@media (min-width: 992px) and (max-width: 1250px) {
+@media (min-width: 992px) and (max-width: 1240px) {
     .header__navbar-item {
         padding: 0 10px;
+    }
+
+    .symptoms__section-card-diff {
+        padding: 20px 32px 50px 32px;
     }
 }
 
