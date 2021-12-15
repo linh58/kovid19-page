@@ -219,12 +219,12 @@
         display: none;
     }
 
-    .mobile-subtitle {
+    .general-subtitle {
         font-size: 1.2rem;
         letter-spacing: 0;
     }
 
-    .mobile-title {
+    .general-title {
         font-size: 3.6rem;
     }
 
@@ -447,15 +447,6 @@
 
     .banner__header-btn-text {
         padding: 5px;
-    }
-
-    .advice__section-title,
-    .step__section-title {
-        margin-left: 25%;
-    }
-
-    .spread__section-title {
-        margin-left: 16.66667%;
     }
 
     .about__section-card-block {

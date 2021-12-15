@@ -89,8 +89,9 @@ body {
     color: #1468cd;
 }
 
-.text-align-center {
+.center {
     text-align: center;
+    justify-content: center;
 }
 
 .heading-padding {
