@@ -70,7 +70,7 @@
     color: #50658e;
 }
 
-.navbar-active {
+.header__navbar-item-link.navbar-active {
     color: var(--primary-color);
 }
 

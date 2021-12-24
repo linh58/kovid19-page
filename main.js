@@ -1,39 +1,28 @@
-var $ = document.querySelector.bind(document);
-var $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
 function start() {
     stickyHeader()
-    navbarActive()
     handleMobileNav()
     clickAccordion()
     clickAccordionItem()
+    navbarScrollActive()
 }
 
 start()
 
 function stickyHeader() {
     window.addEventListener("scroll", function () {
-        var header = $("header");
+        const header = $("header");
         header.classList.toggle("sticky", window.scrollY > 0);
     });
 }
 
-function navbarActive() {
-    var headerNavElements = $$('.header__navbar-item-link')
-    for(var i = 0; i < headerNavElements.length; i++) {
-        headerNavElements[i].onclick = function() {
-            $('.header__navbar-item-link.navbar-active').classList.remove('navbar-active')
-    
-            this.classList.add('navbar-active')
-        }
-    }
-}
-
 function handleMobileNav() {
-    var navbarButton = $('.header__navbar-icon')
-    var navbarMobile = $('.navbar-on-mobile')
-    var closeMobileButton = $('.close-btn-mobile')
-    var headerOverlay = $('.header__overlay')
+    const navbarButton = $('.header__navbar-icon')
+    const navbarMobile = $('.navbar-on-mobile')
+    const closeMobileButton = $('.close-btn-mobile')
+    const headerOverlay = $('.header__overlay')
     
     function showNav() {
         navbarMobile.classList.add('show-navbar-on-mobile')
@@ -71,10 +60,10 @@ function handleMobileNav() {
 }
 
 function clickAccordionItem() {
-    var accordionItem = $$('.accordion-title')
+    const accordionItem = $$('.accordion-title')
     for(var i = 0; i < accordionItem.length; i++){
         accordionItem[i].onclick = function() {
-            var panel = this.nextElementSibling
+            const panel = this.nextElementSibling
             panel.classList.toggle('show-dropDown')
             if(panel.classList.contains('show-dropDown')) {
                 this.classList.add('accordion-title--active')
@@ -87,12 +76,12 @@ function clickAccordionItem() {
 }
 
 function clickAccordion() {
-    var askQuestionLinks = $$('.ask__section-link')
-    var accordionItem = $$('.accordion')
+    const askQuestionLinks = $$('.ask__section-link')
+    const accordionItem = $$('.accordion')
     
     askQuestionLinks.forEach(function(askQuestionLink, index) {
     
-        var accordion = accordionItem[index]
+        const accordion = accordionItem[index]
     
         askQuestionLink.onclick = function() {
     
@@ -102,6 +91,29 @@ function clickAccordion() {
             this.classList.add('ask__section-active')
             accordion.classList.add('accordion-active')
         }
+    })
+}
+
+function navbarScrollActive() {
+    const sections = $$('section')
+    const navbarItems = $$('.header__navbar-item-link')
+
+    window.addEventListener('scroll', () => {
+        let current = ''
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop 
+            const sectionHeight = section.clientHeight
+            
+            if(scrollY >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id')
+            }
+        })
+        navbarItems.forEach(navbarItem => {
+            navbarItem.classList.remove('navbar-active')
+            if(navbarItem.classList.contains(current)) {
+                navbarItem.classList.add('navbar-active')
+            }
+        })
     })
 }
 
